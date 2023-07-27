@@ -11,6 +11,16 @@ module Phlex::Rails::Helpers
 		define_output_helper :action_cable_meta_tag
 	end
 
+	module ActionCableWithJwtMetaTag
+		extend Phlex::Rails::HelperMacros
+
+		# @!method action_cable_with_jwt_meta_tag
+		#		Outputs an "action-cable-url" meta tag with the value of the URL specified in your configuration. This tag supports AnyCable's JWT
+		#		token functionality.
+		#		@see https://github.com/anycable/anycable-rails-jwt#action_cable_with_jwt_meta_tag
+		define_output_helper :action_cable_with_jwt_meta_tag
+	end
+
 	module ActionName
 		extend Phlex::Rails::HelperMacros
 
